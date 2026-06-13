@@ -190,6 +190,8 @@ let ultimaComanda = null;
 hands.onResults(results => {
     if (!results.multiHandLandmarks || !results.multiHandLandmarks[0]) return;
 
+console.log("Mano detectada");
+
     const hand = results.multiHandLandmarks[0];
 
     const d = (p1, p2) => Math.hypot(p1.x - p2.x, p1.y - p2.y);
