@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>🍽️ Control de Comandas</h1>
+    </header>
+
+    <main>
+        <button class="agregar" onclick="agregarComanda()">➕ Agregar Comanda</button>
+        <div id="comandas"></div>
+    </main>
+
+    <!-- Sonidos -->
+    <audio id="alarma" src="Alarma.mp3" preload="auto"></audio>
+    <audio id="toc" src="Toc.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+<!-- Cámara invisible -->
+<video id="camara" autoplay playsinline style="width:300px; height:auto; border:2px solid red;"></video>
+<!-- MediaPipe -->
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+</body>
+</html>

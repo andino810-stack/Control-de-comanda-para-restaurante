@@ -1,0 +1,105 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1b1b1b;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background: #292929;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.agregar {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 20px;
+    padding: 12px 25px;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.agregar:hover {
+    background-color: #27ae60;
+}
+
+.comanda {
+    background-color: #2c3e50;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px auto;
+    width: 85%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: background-color 0.5s, transform 0.3s;
+}
+.comanda:hover {
+    transform: scale(1.02);
+}
+
+.comanda h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #f1c40f;
+}
+
+.comanda h1 {
+    font-size: 60px;
+    margin: 15px 0;
+    color: #ecf0f1;
+}
+
+.comanda button {
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.comanda button:first-of-type {
+    background-color: #3498db;
+    color: white;
+}
+.comanda button:first-of-type:hover {
+    background-color: #2980b9;
+}
+
+.comanda button:last-of-type {
+    background-color: #e74c3c;
+    color: white;
+}
+.comanda button:last-of-type:hover {
+    background-color: #c0392b;
+}
+
+.comanda.tiempo-terminado {
+    background-color: #c0392b !important;
+    animation: parpadeo 1s infinite alternate;
+}
+
+@keyframes parpadeo {
+    from { box-shadow: 0 0 20px #e74c3c; }
+    to { box-shadow: 0 0 40px #ff7675; }
+}
+
+.comanda.tiempo-amarillo {
+    background-color: #f1c40f !important;
+    animation: parpadeoAmarillo 1s infinite alternate;
+}
+
+@keyframes parpadeoAmarillo {
+    from { box-shadow: 0 0 20px #f1c40f; }
+    to { box-shadow: 0 0 40px #fff176; }
+}
