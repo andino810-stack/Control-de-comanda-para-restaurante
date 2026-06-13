@@ -187,6 +187,7 @@ let ultimaComanda = null
 
 let manoDetectada = false;
 hands.onResults(results => {
+    console.log(results.multiHandLandmarks);
 
     if (results.multiHandLandmarks &&
         results.multiHandLandmarks.length > 0) {
