@@ -186,15 +186,19 @@ let ultimaComanda = null
 
 
 let manoDetectada = false;
+
 hands.onResults(results => {
-    console.log(results.multiHandLandmarks);
 
-    if (results.multiHandLandmarks &&
-        results.multiHandLandmarks.length > 0) {
+    if (!results.multiHandLandmarks ||
+        results.multiHandLandmarks.length === 0) {
 
-        console.log("MANO DETECTADA");
+        manoDetectada = false;
+        return;
+    }
 
-        agregarComanda();
+    if (!manoDetectada) {
+        document.querySelector(".agregar").click();
+        manoDetectada = true;
     }
 
 });
