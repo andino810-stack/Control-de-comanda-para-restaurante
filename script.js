@@ -156,49 +156,5 @@ function detenerTemporizador(comandaDiv) {
     timer.style.color = "gray";
 }
 
-// ============================
-// MEDIA PIPE – MANO
-// ============================
-const video = document.getElementById("camara");
-
-const hands = new Hands({
-    locateFile: (file) => `https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`
-});
-
-hands.setOptions({
-    maxNumHands: 1,
-    modelComplexity: 1,
-    minDetectionConfidence: 0.4,
-    minTrackingConfidence: 0.4
-});
-
-// Iniciar cámara con MediaPipe
-const camera = new Camera(video, {
-    onFrame: async () => {
-        await hands.send({ image: video });
-    },
-    width: 320,
-    height: 240
-});
-camera.start();
-
-let ultimaComanda = null 
-
-
-let manoDetectada = false;
-
-hands.onResults(results => {
-
-    if (!results.multiHandLandmarks ||
-        results.multiHandLandmarks.length === 0) {
-
-        manoDetectada = false;
-        return;
-    }
-
-    if (!manoDetectada) {
-        document.querySelector(".agregar").click();
-        manoDetectada = true;
-    }
 
 });
