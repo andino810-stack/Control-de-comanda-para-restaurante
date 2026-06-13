@@ -168,8 +168,8 @@ const hands = new Hands({
 hands.setOptions({
     maxNumHands: 1,
     modelComplexity: 1,
-    minDetectionConfidence: 0.6,
-    minTrackingConfidence: 0.6
+    minDetectionConfidence: 0.4,
+    minTrackingConfidence: 0.4
 });
 
 // Iniciar cámara con MediaPipe
