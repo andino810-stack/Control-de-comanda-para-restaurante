@@ -141,6 +141,3 @@ function detenerTemporizador(comandaDiv) {
     const timer = comandaDiv.querySelector("h1");
     timer.style.color = "gray";
 }
-
-
-});
