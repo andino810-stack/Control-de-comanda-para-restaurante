@@ -182,17 +182,22 @@ const camera = new Camera(video, {
 });
 camera.start();
 
-let ultimaComanda = null;
+let ultimaComanda = null 
 
-// ============================
-// DETECCIÓN DE GESTOS
-// ============================
+
+let manoDetectada = false;
+
 hands.onResults(results => {
 
     if (!results.multiHandLandmarks || !results.multiHandLandmarks[0]) {
+        manoDetectada = false;
         return;
     }
 
-    agregarComanda();
+    if (!manoDetectada) {
+        console.log("🖐️ Mano detectada");
+        agregarComanda();
+        manoDetectada = true;
+    }
 
 });
