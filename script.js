@@ -186,18 +186,14 @@ let ultimaComanda = null
 
 
 let manoDetectada = false;
-
 hands.onResults(results => {
 
-    if (!results.multiHandLandmarks || !results.multiHandLandmarks[0]) {
-        manoDetectada = false;
-        return;
-    }
+    if (results.multiHandLandmarks &&
+        results.multiHandLandmarks.length > 0) {
 
-    if (!manoDetectada) {
-        console.log("🖐️ Mano detectada");
+        console.log("MANO DETECTADA");
+
         agregarComanda();
-        manoDetectada = true;
     }
 
 });
