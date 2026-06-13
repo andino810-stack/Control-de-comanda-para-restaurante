@@ -3,21 +3,7 @@ let wakeLock = null;
 let comandosActivos = 0;
 let intervaloTicTac = null;
 
-// ============================
-// PERMISO DE CÁMARA
-// ============================
-async function pedirPermisoCamara() {
-    try {
-        const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-        document.getElementById("camara").srcObject = stream;
-        console.log("Permiso otorgado ✔️");
-    } catch (err) {
-        console.error("No se pudo acceder a la cámara ❌", err);
-        alert("Debes permitir la cámara para usar los gestos.");
-    }
-}
 
-pedirPermisoCamara();
 
 // ============================
 // PREVENIR QUE LA PANTALLA SE APAGUE
