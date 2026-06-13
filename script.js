@@ -188,9 +188,14 @@ let ultimaComanda = null;
 // DETECCIÓN DE GESTOS
 // ============================
 hands.onResults(results => {
-    if (!results.multiHandLandmarks || !results.multiHandLandmarks[0]) return;
 
-console.log("Mano detectada");
+    if (!results.multiHandLandmarks || !results.multiHandLandmarks[0]) {
+        return;
+    }
+
+    agregarComanda();
+
+});
 
     const hand = results.multiHandLandmarks[0];
 
