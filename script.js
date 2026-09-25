@@ -79,7 +79,7 @@ function agregarComanda() {
 // TEMPORIZADOR
 // ============================
 function iniciarTemporizador(comandaDiv, botonEntrada) {
-    let tiempoRestante = 6 * 60;
+    let tiempoRestante = 20 * 60;
     const timer = comandaDiv.querySelector("h1");
     const botonDetener = comandaDiv.querySelector("button:last-child");
     const alarma = document.getElementById("alarma");
