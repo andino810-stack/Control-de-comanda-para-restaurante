@@ -62,7 +62,7 @@ function agregarComanda() {
     comandaDiv.appendChild(botonEntrada);
 
     const timer = document.createElement("h1");
-    timer.innerText = "6";
+    timer.innerText = "20:00";
     timer.style.display = "none";
     comandaDiv.appendChild(timer);
 
